@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/clinic/schemas/provider"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0"
+	xmlns:tns="http://www.example.org/clinic/schemas/provider"
+	elementFormDefault="qualified">
+
+	<element name="provider-dto">
+		<complexType>
+			<sequence>
+				<element name="id" type="long" />
+				<element name="npi" type="long" />
+				<element name="name" type="string" />
+				<element name="specialization" type="string" />
+				<element name="treatments" type="long" minOccurs="0"
+					maxOccurs="unbounded" nillable="true" />
+			</sequence>
+		</complexType>
+	</element>
+
+</schema>
